@@ -1,0 +1,13 @@
+from machine_lib import * 
+s = login()
+df = get_datafields(s, dataset_id = 'model26', region='USA', universe='TOP3000', delay=1)
+print(df)
+print(df[df['type'] == "MATRIX"]["id"].tolist())
+pc_fields = process_datafields(df, "matrix")
+print(pc_fields)
+df = get_datafields(s, dataset_id='news85', region='USA', universe='TOP3000', delay=1)
+print(df[df['type'] == "VECTOR"]["id"].tolist())
+print(process_datafields(df, "vector"))
+first_order = first_order_factory(pc_fields, ts_ops)
+print(first_order[:10])
+print(len(first_order))
