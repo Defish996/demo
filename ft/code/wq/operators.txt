@@ -1,0 +1,15 @@
+Operators List
+=================
+
+
+CREATE TABLE  if not exists `sa_alpha` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `Selection` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
+  `Combo` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
+  `alpha_id` varchar(255) DEFAULT NULL,
+  `alpha_json` json DEFAULT NULL,
+  `add_date` date DEFAULT NULL,
+  `up_date` date DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
